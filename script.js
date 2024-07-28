@@ -51,6 +51,8 @@ document.addEventListener("click", function (event) {
 
 const startPauseBtn = document.getElementById("startPauseButton");
 const displayTimer = document.getElementById("timer");
+const resetBtn = document.getElementById("resetButton");
+
 
 let [seconds, minutes, hours] = [0, 0, 0]
 let timer = null;
@@ -83,5 +85,12 @@ startPauseBtn.addEventListener('click', () => {
     }
 })
 
+
+resetBtn.addEventListener('click', () => {
+    clearInterval(timer);
+    [seconds, minutes, hours] = [0, 0, 0];
+    displayTimer.innerHTML = "00:00:00";
+    startPauseBtn.textContent = 'Start';
+});
 
 
