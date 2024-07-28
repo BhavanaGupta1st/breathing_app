@@ -9,6 +9,24 @@
 <body>
     <h1>Welcome to Your Breathing Oasis</h1>
     <p>Take a moment to breathe and relax.</p>
-    <button onclick="window.location.href='breathing.html'">Start Breathing Session</button>
+    <button id="startBtn">Start Breathing Session</button>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us.</p>
+            <h2>Information We Collect</h2>
+            <p>We use Hotjar to collect information about user interactions on our site. This includes details like pages visited, time spent on pages, and user actions. This data helps us improve user experience.</p>
+            <h2>How We Use the Information</h2>
+            <p>The information collected is used to understand user behavior and to improve our website.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, please contact us.</p>
+            <button id="modalOkBtn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
