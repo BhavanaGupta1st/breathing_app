@@ -28,21 +28,20 @@ if (container && text) {
     setInterval(breathAnimation, totalTime);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const navBar = document.getElementById("navbar");
-    const menuBtn = document.getElementById("menu-button");
 
-    setTimeout(() => {
-        navBar.classList.add("nav-transition");
-    }, 100);
+const navBar = document.getElementById("navbar");
+const menuBtn = document.getElementById("menu-button");
 
-    menuBtn.addEventListener("click", function () {
-        navBar.classList.toggle("active");
-    });
+setTimeout(() => {
+    navBar.classList.add("nav-transition");
+}, 100);
 
-    document.addEventListener("click", function (event) {
-        if (!navBar.contains(event.target) && !menuBtn.contains(event.target)) {
-            navBar.classList.remove("active");
-        }
-    });
+menuBtn.addEventListener("click", function () {
+    navBar.classList.toggle("active");
+});
+
+document.addEventListener("click", function (event) {
+    if (!navBar.contains(event.target) && !menuBtn.contains(event.target)) {
+        navBar.classList.remove("active");
+    }
 });
