@@ -1,7 +1,3 @@
-function startBreathing() {
-    window.location.href = "breathing.html";
-}
-
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
