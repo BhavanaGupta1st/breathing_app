@@ -30,6 +30,86 @@ p {
   font-size: 1.25rem;
 }
 
+#menu-button {
+  position: fixed;
+  margin: 20px;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 15%;
+  background-color: white;
+  color: black;
+  border-radius: 0px 0px 10px 0px;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.nav-transition {
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+}
+
+nav.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+nav #sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+nav #sidebar li {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+nav #sidebar li:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+nav #sidebar li a {
+  display: block;
+  width: 100%;
+  padding: 0px;
+  color: black;
+  text-decoration: none;
+}
+
+nav #sidebar li a:hover {
+  height: 100%;
+  background-color: #4c6b88;
+  color: white;
+}
+
+.lists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   display: flex;
   align-items: center;
